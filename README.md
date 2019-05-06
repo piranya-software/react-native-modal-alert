@@ -1,4 +1,5 @@
 # react-native-modal-alert
+
 A react-native custom alert component
 
 ### Install
@@ -26,26 +27,33 @@ export default class App extends React.PureComponent {
     }
 
     show = () => {
-        this.setState({isShow: true});
+        this.setState({ isShow: true });
     };
 
     hide = () => {
-        this.setState({isShow: true});
+        this.setState({ isShow: false });
     };
 
     onShow = () => {
         console.log('render alert');
     };
 
-    render(){
+    render() {
         return (
             <ModalAlert
                 visible={this.state.isShow}
                 onShow={this.onShow}
-                onClose={this.hide}>
+                onClose={this.hide}
+            >
                 <TouchableOpacity
                     onPress={this.show}
-                    style={{width: 300, height: 200, backgroundColor: '#fff', borderRadius: 4}}>
+                    style={{
+                        width: 300,
+                        height: 200,
+                        backgroundColor: '#fff',
+                        borderRadius: 4
+                    }}
+                >
                     <Text>Toggle</Text>
                 </TouchableOpacity>
             </ModalAlert>
