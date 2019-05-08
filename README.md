@@ -40,23 +40,26 @@ export default class App extends React.PureComponent {
 
     render() {
         return (
-            <ModalAlert
-                visible={this.state.isShow}
-                onShow={this.onShow}
-                onClose={this.hide}
-            >
+            <View>
                 <TouchableOpacity
-                    onPress={this.show}
-                    style={{
-                        width: 300,
-                        height: 200,
-                        backgroundColor: '#fff',
-                        borderRadius: 4
-                    }}
-                >
-                    <Text>Toggle</Text>
+                        onPress={this.show}
+                        style={{
+                            width: 300,
+                            height: 200,
+                            backgroundColor: '#fff',
+                            borderRadius: 4
+                        }}
+                    >
+                        <Text>Toggle</Text>
                 </TouchableOpacity>
-            </ModalAlert>
+                <ModalAlert
+                    visible={this.state.isShow}
+                    onShow={this.onShow}
+                    onClose={this.hide}
+                >
+                    <View><Text>modal content</Text></View>
+                </ModalAlert>
+            </View>
         );
     }
 }
