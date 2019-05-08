@@ -1,6 +1,6 @@
 {
     "name": "react-native-modal-alert",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "description": "a react-native custom alert component",
     "main": "lib/index.js",
     "files": [
